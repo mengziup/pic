@@ -1,0 +1,20 @@
+server:
+  port: 33810
+  servlet:
+    context-path: /gtcp/supporting
+  compression:
+    enabled: true
+    mime-types: text/plain,application/javascript,application/x-javascript,text/css,application/xml,application/json
+    min-response-size: 1024
+spring:
+    profiles:
+      active: dev
+    application:
+      name: btrust-data-compute-platform-supporting-server
+    servlet:
+      multipart:
+        enabled: true
+        max-file-size: 100MB
+        max-request-size: 120MB
+fastjson:
+  features: WriteDateUseDateFormat
